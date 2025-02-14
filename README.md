@@ -1,14 +1,21 @@
 # Accessible Astro Dashboard
 
-This Dashboard theme is build upon the (awesome) [Astro Static Site Builder](https://astro.build/). To help you build your project *faster*, this theme includes some dedicated accessible components (such as a keyboard accessible and responsive navigation) and several components coming from the [Accessible Astro Components](https://github.com/markteekman/accessible-astro-components) npm package. This theme also includes example pages, admin pages, a custom 404 page and many **Design System** utility classes, patterns and primatives (such as grids, buttons, lists, spacings, sizes and more).
+[![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
 
-[Live demo](https://accessible-astro-dashboard.netlify.app)
+![accessible-astro-dashboard](https://github.com/user-attachments/assets/1c0eaf50-148d-4986-8211-a835a65eb2e3)
 
-## Getting started
-Run the following commands in your project folder to get started:
-```console
-npm install && npm start
-```
+A modern, accessibility-focused dashboard template built with [Astro](https://astro.build/). Designed with WCAG guidelines in mind, this theme provides a comprehensive admin interface with built-in accessibility features. It includes a responsive, keyboard-accessible navigation system, authentication flows, and integrates seamlessly with [Accessible Astro Components](https://github.com/incluud/accessible-astro-components). Complete with example pages, authentication flows, and a custom 404 page, this template offers everything you need to kickstart your accessible admin dashboard.
+
+[![LIVE DEMO](https://img.shields.io/badge/LIVE_DEMO-4ECCA3?style=for-the-badge&logo=astro&logoColor=black)](https://accessible-astro-dashboard.netlify.app//) &nbsp;
+[![DOCUMENTATION](https://img.shields.io/badge/DOCUMENTATION-A682FF?style=for-the-badge&logo=astro&logoColor=black)](https://accessible-astro.incluud.dev/themes/accessible-astro-dashboard) &nbsp;
+[![Follow on X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/incluud) &nbsp;
+[![Follow on BlueSky](https://img.shields.io/badge/BlueSky-0285FF?style=for-the-badge&logo=bluesky&logoColor=white)](https://bsky.app/profile/incluud.dev) &nbsp;
+[![Sponsor on Open Collective](https://img.shields.io/badge/Open%20Collective-7FADF2?style=for-the-badge&logo=opencollective&logoColor=white)](https://opencollective.com/incluud) &nbsp;
+[![Sponsor on GitHub](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=EA4AAA)](https://github.com/sponsors/incluud)
+
+## Our mission
+
+> Provide developers with accessible, easy-to-use components that make building inclusive web applications simpler and faster, without compromising on customization or performance.
 
 ## (Accessibility) features
 
@@ -35,239 +42,59 @@ npm install && npm start
 - [Accessible Astro Components](https://github.com/markteekman/accessible-astro-components) package comes preinstalled with extra components such as Accordions, Modals and Notifications
 - Nate Moore's awesome [Astro Icon](https://github.com/natemoo-re/astro-icon) package is also preinstalled which can be applied to different use cases
 
-**Provided by the Accessible Astro Components package*
+## Getting started
 
-## Login & Authentication
+Clone this theme locally and run any of the following commands in your terminal:
 
-This starter contains a basic example of authentication and redirecting based on a users logged in status. However, this is done using SSG, which is not ideal, but serves the purpose of this demo. For better authentication and redirecting you should use [Astro's (experimental) SSR](https://docs.astro.build/en/guides/server-side-rendering/).
+| Command           | Action                                       |
+| :---------------- | :------------------------------------------- |
+| `npm install`     | Installs dependencies                        |
+| `npm run dev`     | Starts local dev server at `localhost:4321`  |
+| `npm run build`   | Build your production site to `./dist/`      |
+| `npm run preview` | Preview your build locally, before deploying |
 
-### Enabling SSR
+## Accessible Astro projects
 
-For the purpose of the demo I have not enabled SSR, simply due to the fact how I've setup the demo websites of all [accessible-astro.dev](https://accessible-astro.dev) subdomains. However, I might add it in the future. It is the preferred way to handle your login and redirect cases.
+- [Accessible Astro Starter](https://github.com/incluud/accessible-astro-starter): Fully accessible starter for kickstarting Astro projects, with Tailwind.
+- [Accessible Astro Components](https://github.com/incluud/accessible-astro-components/): Library of reusable, accessible components build for Astro.
+- [Accessible Astro Dashboard](https://github.com/incluud/accessible-astro-dashboard/): User-friendly dashboard interface with a login screen and widgets.
+- [Accessible Astro Docs](https://github.com/incluud/accessible-astro-docs): Comprehensive documentation for all Accessible Astro projects.
 
-### LoginForm.astro
+Check out our [roadmap](https://github.com/orgs/incluud/projects/4/views/1) to see what's coming next!
 
-This theme contains an example login flow, using a fake email address and password and by utilizing the `localStorage`. All pages redirect to `/login.astro` if you haven't logged in. After logging in the value `isLoggedIn` is set to `true` and your authenticated to view the admin pages. When building this using SSR you should use `cookies` instead of the `localStorage`.
+## Contributing
 
-⚠️ **Note: this is just an example, make sure you build your own secure authentication. Checkout this [official Astro Blog post](https://astro.build/blog/experimental-server-side-rendering/) for more information about authentication and login.**
+We welcome contributions to improve the documentation! You can help by:
 
-```js
-<script>
-// fetch your data from an API
-// and replace that with an actual user object for example
+1. [Filing an issue](https://github.com/incluud/accessible-astro-dashboard/issues)
+2. [Submitting a pull request](https://github.com/incluud/accessible-astro-dashboard/pulls)
+3. [Starting a discussion](https://github.com/incluud/accessible-astro-dashboard/discussions)
+4. [Supporting on Open Collective](https://opencollective.com/incluud)
 
-submitButton.addEventListener('click', event => {
-  event.preventDefault()
+## Support this project
 
-  if (emailInput.value === 'admin@astro.build' && passwordInput.value === 'Astronaut570') {
-    localStorage.setItem('isLoggedIn', 'true')
-    window.location.href = '/'
-  }
-})
-</script>
-```
+Your support helps us cover basic costs and continue building accessible solutions for the Astro ecosystem. By becoming a sponsor, you're not just supporting code – you're helping create a more inclusive web for everyone. Every contribution, big or small, helps maintain and improve these accessibility-focused tools.
 
-### DefaultLayout.astro
+[![Sponsor on Open Collective](https://img.shields.io/badge/Open%20Collective-7FADF2?style=for-the-badge&logo=opencollective&logoColor=white)](https://opencollective.com/incluud)
 
-```js
----
-import { getUser } from '../api/index.js'
+## Together we make a difference
 
-const user = await getUser(Astro.request)
+We want to express our heartfelt gratitude to everyone who contributes to making the web more accessible:
 
-if (!user) {
-  return Astro.redirect('/login')
-}
----
-```
-
-## Utilities
-
-This theme contains some extra **Design System** like utility classes to aid in the global layout of your project. All of this can be found in the `public/scss/base` directory, and compiles in the `globals.scss` file. Using these primitives is totally optional, use or remove at your own preference :) What it contains:
-
-- Reset file to reset browser defaults and ensure everything looks good
-- Some basic font settings, such as responsive heading sizes
-- Color shades for your color pallet, rendered to the `:root` of your website as custom properties
-- Simple auto-grid setting using `display: grid` and a `data-attribute`
-- A bit more advanced grid settings using `display` grid to easily setup a 12-column layout
-- Utilities set in `_utility.scss` for things such as spacing, sizes, colors, and box-shadows
-
-### 12 Column Grid
-
-12 Column Grid enables you to build custom column based layouts. Using `display: grid;` you can define the amount of columns that elements should take up in your `.grid`, and for which breakpoint they should do so. You can also use offset on a grid to create an extra column of offset. The grid offers different utilities for the individual grid items such `equal-height`, `x-start`, `x-center`, `x-end`, `y-start`, `y-center` and `y-end`. Grid comes with default gutters, to disable them you can use the utility class `no-gutters`.
-
-```html
-<div class="container">
-  <div class="grid">
-    <div class="small-12 medium-3">
-      <h3>Sidebar</h3>
-      <!-- ... -->
-    </div>
-    <div class="small-12 medium-8 offset-medium-4">
-      <h3>Main</h3>
-      <!-- ... -->
-    </div>
-  </div>
-</div>
-```
-
-### Alignment
-
-Alignment classes can be used to align elements in your HTML. There's `align-center`, `align-horizontal` and `align-vertical`.
-
-```html
-<div class="align-center w-screen h-screen">
-  <h1>Center me on the screen!</h1>
-</div>
-```
-
-### Animations
-
-There are a couple of basic animations which you can throw on your HTML elements like `blink`, `fade-in`, `pop-up` and `spin`. You can also use some animation delays to create different effects.
-
-```html
-<div data-animation="fade-in">
-  <p>I've got a fancy fade-in animation that starts right away.</p>
-</div>
-<div data-animation="fade-in" data-animation-delay="0.25s">
-  <p>I've got a fancy fade-in animation after 0.25s.</p>
-</div>
-<div data-animation="fade-in" data-animation-delay="0.5s">>
-  <p>I've got a fancy fade-in animation after 0.5s.</p>
-</div>
-```
-
-### Auto Grid
-
-Simply apply the `data-auto-grid` attribute on your parent `div` with a number from 2-6 (if you need more columns just tweak the for loop in `_auto-grid.scss`). The grid automatically creates new rows (this is how `display: grid` works by default).
-
-```html
-<div class="container" data-auto-grid="3">
-  <p>First column</p>
-  <p>Second column</p>
-  <p>Third column</p>
-</div>
-```
-
-You can also center the contents of the cell using the `data-grid-center` attribute. Use it together with `data-auto-grid`.
-
-```html
-<div class="container" data-auto-grid="3" data-grid-center>
-  <!-- ... -->
-</div>
-```
-
-### Borders
-
-With two border radius utility classes (`radius-small` and `radius-large`) you can change the border radius of your HTML elements on the fly.
-
-```html
-<div class="bg-neutral-900 space-32 radius-large">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-</div>
-```
-
-### Buttons
-
-A Button primitive to easily apply button styles to your `<button>` and `<a>` tags. Simply apply the class `button` to your element. There are different variations in colors (`color-secondary`, `color-info`, `color-success`, `color-warning`, `color-error`) which is primary by default, sizing (`size-tiny`, `size-large`, `size-huge`) which is medium by default and behavior (`behavior-full`) which stretches the button to 100% width.
-
-```html
-<a href="/" class="button color-success size-huge behavior-full">
-  Click me to go to space!
+<a href="https://github.com/incluud/accessible-astro-starter/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=incluud/accessible-astro-dashboard" />
 </a>
-```
 
-### Colors
+- **The Astro team** for creating an amazing static site generator and the wonderful Starlight theme
+- **Our contributors** who dedicate their time and expertise to improve these tools
+- **Our sponsors** who help make this project sustainable
+- **The web community** for embracing and promoting web accessibility
+- **You, the developer** for choosing to make your projects more accessible
 
-You can setup your own color schemes in the `_colors.scss` file. You'll find a SCSS map, which gets printed inside `_root.scss` as custom properties. There are also several color utilities such as `text-primary-#` and `bg-neutral-#` based on all colors you've defined. `text-primary-#` should be used on a parent element to give the child's the respective color.
+Together, we're not just building documentation or components – we're creating a more inclusive and accessible web for everyone. Every contribution, whether it's code, documentation, bug reports, or feedback, helps move us closer to this goal. ✨
 
-```scss
-$colors: (
-  primary: (
-    100: hsl(262, 90%, 95%),
-    200: hsl(262, 100%, 88%),
-    300: hsl(262, 100%, 78%),
-    400: hsl(268, 82%, 60%),
-    500: hsl(273, 79%, 48%),
-  ),
-  // ...
-);
-```
+Remember: Accessibility is not a feature, it's a fundamental right. Thank you for being part of this journey!
 
-```html
-<div class="text-neutral-100 bg-neutral-900 space-32">
-  <p>Dark background with white text on it!</p>
-</div>
-```
+## The story behind Accessible Astro
 
-### Elevations
-
-Use elevations on your HTML elements to add a box shadow of different intensities. Use either `elevation-100`, `elevation-200`, `elevation-300`, `elevation-400` or `elevation-500`.
-
-```html
-<div class="space-32 radius-large elevation-400">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-</div>
-```
-
-### Height / Width
-
-You can set the height and width of your elements to either 100 view port units or percentages using `h-screen`, `h-full`, `w-screen` and `w-full` respectfully.
-
-```html
-<div class="h-screen w-screen align-center">
-  <p>I'm centered in the middle of the screen!</p>
-</div>
-```
-
-### Margins, Paddings and Spaces
-
-To prevent spacing each element in your website individually and to prevent inconsistencies, you can use the `.margin-#` and `.padding-#` utility classes. A good practice is to set in on your `<section>` elements, for starters. To space out content you can use a special `.space-content` class on your parent div (for example an element of your `.grid`). By default, margin/padding top and bottom are set with these utilities. You can also set it explicitly using either `.top` of `.bottom` class tokens. Find or tweak all spacing options in `_space.scss`. `space-#` tokens however add padding all around an element, which is great of you need to make card like blocks on the fly by combining `space` with the other utilities.
-
-```html
-<section class="padding-32">
-  <div class="container">
-    <h2 class="margin-16 bottom">Grid example</h2>
-  </div>
-</section>
-```
-
-```html
-<div class="box space-32 bg-primary-200 radius-small elevation-100">
-  <div class="space-content">
-    <h3>I look like a card!</h3>
-    <p>And space-content adds space between us for readability.</p>
-  </div>
-</div>
-```
-
-### Sizes
-
-If you need an exception on your font-size for a specific reason you can use size utility classes to accomplish that. Using it is easy. Find or tweak all spacing options in `_size.scss`.
-
-```html
-<div class="container">
-  <p class="size-20">I'm a bigger font size!</p>
-</div>
-```
-
-## Other Accessible Astro projects
-
-- [Accessible Astro Starter](https://github.com/markteekman/accessible-astro-starter/)
-- [Accessible Astro Components](https://github.com/markteekman/accessible-astro-components/)
-- [Accessible Astro Documentation](https://accessible-astro.dev)
-
-## Helping out
-
-If you find that something isn't working right then I'm always happy to hear it to improve this starter! You can contribute in many ways and forms. Let me know by either:
-
-1. [Filing an issue](https://github.com/markteekman/accessible-astro-dashboard/issues)
-2. [Submitting a pull request](https://github.com/markteekman/accessible-astro-dashboard/pulls)
-3. [Starting a discussion](https://github.com/markteekman/accessible-astro-dashboard/discussions)
-4. [Buying me a coffee!](https://www.buymeacoffee.com/markteekman)
-
-## Thank you!
-
-A big thank you to the creators of the awesome Astro static site generator and to all using this starter to make the web a bit more accessible for all people around the world :)
-
-[![buymeacoffee-button](https://user-images.githubusercontent.com/3909046/150683481-be070424-7bb0-4dd7-a3cb-43b5605163f5.png)](https://www.buymeacoffee.com/markteekman)
+Accessible Astro started as a personal project by [Mark Teekman](https://github.com/markteekman) in 2021 when Astro was in its early stages, born from a passion for web accessibility and the Astro framework. What began as a single starter template grew into a family of accessible solutions, leading to the creation of [Incluud](https://github.com/incluud), an initiative with [Peter Padberg](https://github.com/peterpadberg) to make the web more inclusive. Today, these projects continue to grow and evolve with the help of our amazing community, staying true to their original purpose: making web accessibility easier for developers and better for everyone.
