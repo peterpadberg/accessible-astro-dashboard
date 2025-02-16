@@ -23,23 +23,23 @@ A modern, accessibility-focused dashboard template built with [Astro](https://as
 - `login.astro` contains example login data and a warning notification for when the credentials are incorrect
 - Contains a dashboard example in the `index.astro` page using the `DefaultLayout.astro` layout
 - Several examples of admin pages such as `media.astro`, `messages.astro`, `products.astro`, `settings.astro` and `users.astro`
-- `Media.astro` component for images, used on the `media.astro` page *
-- `Pagination.astro` component for paginating results, used on the `media.astro` page *
+- `Media.astro` component for images, used on the `media.astro` page \*
+- `Pagination.astro` component for paginating results, used on the `media.astro` page \*
 - `DashboardWidget.astro` component serves as an example for the dashboard on `index.astro`
 - `EmpyState.astro` component which can be displayed on pages that don't have any data yet
 - `LoginForm.astro` component with a basic accessible login form and some form controls
-- `SkipLinks.astro` component to skip to either the main menu or the main content *
+- `SkipLinks.astro` component to skip to either the main menu or the main content \*
 - `Navigation.astro` component with keyboard accessible navigation (arrow keys, escape key)
   - This component is a comprehensive sidebar navigation on desktop with the option to expand or collapse
   - The users menu width preference is stored in a `localStorage` value so that it is preserved during page reloads
   - The navigation automatically switches to an accessible mobile navigation for viewport widths below the medium breakpoint
 - `ResponsiveToggle.astro` component with an accessible responsive toggle button for the mobile navigation
-- `DarkMode.astro` component toggle with accessible button which saves the users preference in the `localStorage` *
+- `DarkMode.astro` component toggle with accessible button which saves the users preference in the `localStorage` \*
 - `404.astro` provides a custom 404 error page which you can adjust to your needs
 - `.sr-only` utility class for screen reader only text content
 - `prefers-reduced-motion` disables animations for users that have this preference turned on
 - Outline focus indicator which works on dark and light backgrounds
-- [Accessible Astro Components](https://github.com/markteekman/accessible-astro-components) package comes preinstalled with extra components such as Accordions, Modals and Notifications
+- [Accessible Astro Components](https://github.com/incluud/accessible-astro-components) package comes preinstalled with extra components such as Accordions, Modals and Notifications
 - Nate Moore's awesome [Astro Icon](https://github.com/natemoo-re/astro-icon) package is also preinstalled which can be applied to different use cases
 
 ## Getting started
