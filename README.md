@@ -6,7 +6,7 @@
 
 A modern, accessibility-focused dashboard template built with [Astro](https://astro.build/). Designed with WCAG guidelines in mind, this theme provides a comprehensive admin interface with built-in accessibility features. It includes a responsive, keyboard-accessible navigation system, authentication flows, and integrates seamlessly with [Accessible Astro Components](https://github.com/incluud/accessible-astro-components). Complete with example pages, authentication flows, and a custom 404 page, this template offers everything you need to kickstart your accessible admin dashboard.
 
-[![LIVE DEMO](https://img.shields.io/badge/LIVE_DEMO-4ECCA3?style=for-the-badge&logo=astro&logoColor=black)](https://accessible-astro-dashboard.netlify.app//) &nbsp;
+[![LIVE DEMO](https://img.shields.io/badge/LIVE_DEMO-4ECCA3?style=for-the-badge&logo=astro&logoColor=black)](https://accessible-astro-dashboard.incluud.dev/login/) &nbsp;
 [![DOCUMENTATION](https://img.shields.io/badge/DOCUMENTATION-A682FF?style=for-the-badge&logo=astro&logoColor=black)](https://accessible-astro.incluud.dev/themes/accessible-astro-dashboard) &nbsp;
 [![Follow on X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/incluud) &nbsp;
 [![Follow on BlueSky](https://img.shields.io/badge/BlueSky-0285FF?style=for-the-badge&logo=bluesky&logoColor=white)](https://bsky.app/profile/incluud.dev) &nbsp;
