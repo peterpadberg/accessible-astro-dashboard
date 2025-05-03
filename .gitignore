@@ -28,3 +28,6 @@ package-lock.json
 
 # Astro generated files
 .astro/
+
+# Netlify deployment config
+.netlify/
