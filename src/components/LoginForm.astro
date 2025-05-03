@@ -1,11 +1,11 @@
 ---
 import { Notification } from 'accessible-astro-components'
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon/components'
 ---
 
 <form class="login-form space-content" method="post">
   <Notification type="warning">
-    <Icon pack="majesticons" name="emoji-sad-line" /><p class="size-12">Incorrect email and password combination. Please try again.</p>
+    <Icon name="lucide:frown" /><p class="size-12">Incorrect email and password combination. Please try again.</p>
   </Notification>
   <div class="login-form__controls">
     <label for="email">Email</label>
@@ -24,26 +24,38 @@ import { Icon } from 'astro-icon'
 </form> 
 
 <script>
-  // variables
-  const form = document.querySelector('.login-form')
-  const notification = form.querySelector('.notification')
-  const emailInput = form.querySelector('input[name="email"]')
-  const passwordInput = form.querySelector('input[name="password"]')
-  const submitButton = form.querySelector('button')
+  function initLoginForm() {
+    // variables
+    const form = document.querySelector('.login-form')
+    if (!form) return
+    
+    const notification = form.querySelector('.notification') as HTMLElement
+    if (!notification) return
+    
+    const emailInput = form.querySelector('input[name="email"]') as HTMLInputElement
+    const passwordInput = form.querySelector('input[name="password"]') as HTMLInputElement
+    if (!emailInput || !passwordInput) return
+    
+    const submitButton = form.querySelector('button')
+    if (!submitButton) return
+    
+    // execution
+    notification.style.display = 'none'
+    
+    submitButton.addEventListener('click', event => {
+      event.preventDefault()
+      console.log(emailInput.value + ' ' + passwordInput.value);
+      
+      if (emailInput.value === 'admin@astro.demo' && passwordInput.value === 'Astronaut570') {
+        localStorage.setItem('isLoggedIn', 'true')
+        window.location.href = '/'
+      } else {
+        notification.style.display = 'flex'
+      }
+    })
+  }
 
-  // execution
-  notification.style.display = 'none'
-
-  submitButton.addEventListener('click', event => {
-    event.preventDefault()
-
-    if (emailInput.value === 'admin@astro.demo' && passwordInput.value === 'Astronaut570') {
-      localStorage.setItem('isLoggedIn', 'true')
-      window.location.href = '/'
-    } else {
-      notification.style.display = 'flex'
-    }
-  })
+  initLoginForm()
 </script>
 
 <style lang="scss" is:global>
