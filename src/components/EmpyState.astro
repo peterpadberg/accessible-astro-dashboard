@@ -4,6 +4,8 @@ import { Icon } from 'astro-icon/components'
 ---
 
 <Notification>
-  <Icon name="lucide:graduation-cap" />
-  <slot />
+  <Fragment>
+    <Icon name="lucide:graduation-cap" />
+    <slot />
+  </Fragment>
 </Notification>
