@@ -5,7 +5,10 @@ import { Icon } from 'astro-icon/components'
 
 <form class="login-form space-content" method="post">
   <Notification type="warning">
-    <Icon name="lucide:frown" /><p class="size-12">Incorrect email and password combination. Please try again.</p>
+    <Fragment>
+      <Icon name="lucide:frown" />
+      <p class="size-12">Incorrect email and password combination. Please try again.</p>
+    </Fragment>
   </Notification>
   <div class="login-form__controls">
     <label for="email">Email</label>

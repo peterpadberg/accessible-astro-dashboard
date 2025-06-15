@@ -5,10 +5,17 @@
 <script>
   // variables
   const mainNav = document.querySelector('#main-navigation')
+  if(!mainNav) {
+    return
+  }
   const mobileNavigation = mainNav.querySelector('.mobile-menu')
   const responsiveToggle = mainNav.querySelector('.responsive-toggle')
   const menuIconLabels = [...mainNav.querySelectorAll('.sr-only')]
   const mediaQuery = window.matchMedia('(min-width: 48em)')
+
+  if(!mobileNavigation || !responsiveToggle) {
+    return
+  }
 
   // functions
   const openMenu = (toggle) => {
